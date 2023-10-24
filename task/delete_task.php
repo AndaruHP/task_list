@@ -20,15 +20,10 @@ if (isset($_GET['id'])) {
 
         // Check if task is done and checklist is checked
         if ($taskStatus === 'Done' && $checklist === '1') {
-            echo '<script>';
-            echo 'if (confirm("Anda yakin ingin menghapus task ini?"))';
-            echo '{';
-            echo '   window.location.href = "task/delete_task.php?id=' . $task_id . '";';
-            echo '}';
-            echo 'else {';
-            echo '   window.location.href = "../index.php";';
-            echo '}';
-            echo '</script>';
+            $sql = "DELETE FROM task_list WHERE id = $task_id";
+            $result = mysqli_query($conn, $sql);
+            header('location: ../index.php');
+            exit;
         } else {
             // Task is not done or checklist is not checked, show a notification
             echo '<script>';

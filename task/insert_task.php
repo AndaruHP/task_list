@@ -10,7 +10,7 @@ if (isset($_POST['add_task'])) {
     $status = "Not Started yet";
     $user_id = $_SESSION['user_id'];
 
-    $sql = "INSERT INTO task_list (title, description, date_task, status, user_id) VALUES ('$title', '$description', '$date', '$status', '$user_id')";
+    $sql = "INSERT INTO task_list (title, description, date_task, status, user_id, checklist) VALUES ('$title', '$description', '$date', '$status', '$user_id',0)";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         header('location: ../index.php');
@@ -29,6 +29,7 @@ if (isset($_POST['add_task'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insert</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="styles.css"rel="stylesheet">
 </head>
 
 <body>
