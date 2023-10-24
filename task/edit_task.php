@@ -72,6 +72,8 @@ if (isset($_POST['edit_task'])) {
                 </div>
                 <div class="form-btn">
                     <input type="submit" class="btn btn-primary" value="Edit" name="edit_task">
+                    <a href="../index.php" class="btn btn-danger mt-2">Cancel</a>
+                </div>
             </form>
         </div>
     </div>

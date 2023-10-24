@@ -54,6 +54,7 @@ if (isset($_POST['add_task'])) {
                 </div>
                 <div class="form-btn">
                     <input type="submit" class="btn btn-primary" value="Add" name="add_task">
+                    <a href="../index.php" class="btn btn-danger mt-2">Cancel</a>
                 </div>
             </form>
         </div>
