@@ -87,20 +87,20 @@ if (isset($_POST['submit_login'])) {
             bottom: -80px;
         }
 
-form{
-    height: 470px;
-    width: 400px;
-    background-color: rgba(255,255,255,0.13);
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
-}
+        form {
+            height: 470px;
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.13);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+        }
 
         form * {
             font-family: 'Poppins', sans-serif;
@@ -160,62 +160,63 @@ form{
             margin-top: 15px;
             font-size: 14px;
         }
-/* Reset some properties for smaller screens */
-@media (max-width: 600px) {
-    .background {
-        width: 80%;
-        height: auto;
-        position: static;
-        transform: none;
-        left: 0;
-        top: 0;
-    }
 
-    .background .shape {
-        display12px;
-    }
+        /* Reset some properties for smaller screens */
+        @media (max-width: 600px) {
+            .background {
+                width: 80%;
+                height: auto;
+                position: static;
+                transform: none;
+                left: 0;
+                top: 0;
+            }
 
-    input {
-        height: 30px;
-    }
+            .background .shape {
+                display: 12px;
+            }
 
-    button {
-        font-size: 14px;
-        padding: 10px 0;
-    }
-    form {
-        height: 630px;
-    }
-}
+            input {
+                height: 30px;
+            }
 
+            button {
+                font-size: 14px;
+                padding: 10px 0;
+            }
+
+            form {
+                height: 630px;
+            }
+        }
     </style>
 
 </head>
 
 <body>
-            <?php
-            echo $_SESSION['status'];
-            ?>
-            <div class="background">
+    <?php
+    echo $_SESSION['status'];
+    ?>
+    <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-            <form action="" method="post">
-                <h3>Login</h3>
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" name="username">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password">
-                </div>
-                <div class="form-btn">
-                    <input type="submit" class="btn btn-primary" value="Login" name="submit_login">
-                </div>
-                <p>Not registered yet? <a href="register.php">Register</a></p>
-            </form>
+    <form action="" method="post">
+        <h3>Login</h3>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username">
         </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <div class="form-btn">
+            <input type="submit" class="btn btn-primary" value="Login" name="submit_login">
+        </div>
+        <p>Not registered yet? <a href="register.php">Register</a></p>
+    </form>
+    </div>
     </div>
 </body>
 
