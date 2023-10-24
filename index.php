@@ -25,7 +25,13 @@ include('database/connect.php');
         <div class="card p-3">
             <div class="row">
                 <div class="col-md-10">
+                    <?php
+                    $sql = "SELECT * FROM access_table WHERE id = " . $_SESSION['user_id'];
+                    $result = mysqli_query($conn, $sql);
+                    $user = mysqli_fetch_assoc($result);
 
+                    echo "<h2 class='fw-bold'>Welcome, " . $user['username'] . "</h2>";
+                    ?>
                 </div>
                 <div class="col-md-2">
                     <a href="loginandregister/logout.php" class="btn btn-primary">Logout</a>
