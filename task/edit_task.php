@@ -19,8 +19,8 @@ if (isset($_GET['id'])) {
 }
 
 if (isset($_POST['edit_task'])) {
-    $title = $_POST['title'];
-    $description = $_POST['description'];
+    $title = htmlspecialchars($_POST['title']);
+    $description = htmlspecialchars($_POST['description']);
     $date = $_POST['date'];
 
     $sql = "UPDATE task_list SET title = '$title', description = '$description', date_task = '$date' WHERE id = $id";
