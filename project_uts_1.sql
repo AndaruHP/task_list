@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2023 at 09:53 AM
+-- Generation Time: Oct 24, 2023 at 12:37 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -62,7 +62,9 @@ CREATE TABLE `task_list` (
 --
 
 INSERT INTO `task_list` (`id`, `title`, `description`, `date_task`, `status`, `user_id`, `checklist`) VALUES
-(13, 'asaa', 'asas', '2122-02-11', 'Done', 5, 1);
+(21, 'Makan', 'Makan nasi pake gula sama garam kayaknya rasanya mirip ice cream kampus', '2023-10-25', 'On Progress', 5, 0),
+(22, 'Minum', 'Air galon kampus ditambah air libro rasanya kayaknya mirip air gula.', '2023-10-24', 'On Progress', 5, 0),
+(23, 'Tidur', 'Setiap pagi jalan ke kampus untuk tidur duluan karena semalam tidurnya kurang.', '2023-10-24', 'Not Started yet', 5, 0);
 
 --
 -- Indexes for dumped tables
@@ -95,7 +97,7 @@ ALTER TABLE `access_table`
 -- AUTO_INCREMENT for table `task_list`
 --
 ALTER TABLE `task_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Constraints for dumped tables
